@@ -29,26 +29,32 @@
               <v-container fluid style="padding-bottom: 20px;">
 
                 <div class="v-text-field--filled">
-                  <v-text-field
-                      color="black"
-                      v-for="text in texts"
-                      :key="text.label"
-                      :label="text.label"
-                      :hint="text.hint"
-                      :type="text.type"
-                  ></v-text-field>
-                  <!--                  <v-text-field color="black"-->
-                  <!--                                label="邮箱或用户名"-->
-                  <!--                                hint="邮箱或用户名规则"-->
-                  <!--                                type="text">-->
-                  <!--                  </v-text-field>-->
+                  <!--                  <v-text-field-->
+                  <!--                      color="black"-->
+                  <!--                      v-for="text in texts"-->
+                  <!--                      :key="text.label"-->
+                  <!--                      :label="text.label"-->
+                  <!--                      :hint="text.hint"-->
+                  <!--                      :type="text.type"-->
+                  <!--                  ></v-text-field>-->
+                  <v-text-field color="black"
+                                label="邮箱或用户名"
+                                hint="邮箱或用户名规则"
+                                v-model="user.username"
+                                type="text">
+                  </v-text-field>
 
-                  <!--                  <v-text-field color="black"-->
-                  <!--                                label="密码"-->
-                  <!--                                hint="密码规则"-->
-                  <!--                                type="password">-->
-                  <!--                  </v-text-field>-->
+                  <v-text-field color="black"
+                                label="密码"
+                                hint="密码规则"
+                                v-model="user.password"
+                                type="password">
+                  </v-text-field>
                 </div>
+
+                <h3>flag: {{ flag }}</h3>
+                <h3>user.username: {{ typeof user.username }}</h3>
+                <h3>user.password: {{ typeof user.password }}</h3>
 
                 <v-card-text style="color: gray; padding-bottom: 20px;">
                   *没有账号？请
@@ -96,8 +102,16 @@ export default {
     items: [
       {url: '/user', icon: 'mdi-check', text: '登录'},
       {url: '/', icon: 'mdi-close', text: '取消'}
-    ]
-  })
+    ],
+    user: {
+      username: '',
+      password: ''
+    },
+    flag: false,
+  }),
+  mounted() {
+    this.flag = this.user.username === '';
+  }
 }
 </script>
 

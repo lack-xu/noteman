@@ -6,9 +6,7 @@ import github.lackxu.noteman.mapper.AboutMapper;
 import org.json.JSONObject;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,13 +23,28 @@ public class AboutController {
     private About about;
 
     // REST Api Server Path (Where To Store/Transfer Data)
-    @RequestMapping("/aboutList")
+    @GetMapping("/aboutList")
     public List<About> selectAboutList() {
         return aboutMapper.selectList(null);
     }
 
-    @GetMapping("/aboutType")
-    public About selectAboutById(Integer id) {
-        return aboutMapper.selectById(id = 2);
+    @PostMapping("/aboutType?id={id}")
+    public About selectAboutById(@RequestBody Integer id) {
+        return aboutMapper.selectById(id);
+    }
+
+    @DeleteMapping("/aboutType?id={id}")
+    public void deleteAbout(@PathVariable Integer id) {
+        aboutMapper.deleteById(id);
+    }
+
+    @PostMapping("/aboutInsert")
+    public void addAboutContext(About about) {
+        aboutMapper.insert(about);
+    }
+
+    @RequestMapping("/aboutUpdate")
+    public void updateAboutContext(About about) {
+        aboutMapper.updateById(about);
     }
 }
