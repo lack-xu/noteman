@@ -1,4 +1,4 @@
-package entity;
+package github.lackxu.noteman.entity;
 
 import java.io.Serializable;
 import lombok.Data;
