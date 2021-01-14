@@ -1,10 +1,12 @@
 <template>
-  <h1>REGISTER</h1>
+  <v-main>
+    <h1>Books</h1>
+  </v-main>
 </template>
 
 <script>
 export default {
-  name: "Register"
+  name: "Books"
 }
 </script>
 

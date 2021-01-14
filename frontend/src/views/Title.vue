@@ -23,7 +23,10 @@
         </template>
       </v-img>
       <v-col cols="12">
-        <v-row>
+        <v-row
+            justify="center"
+            align="center"
+        >
           <h1 class="text">
             Noteman 一个简易个人笔记管理网站
           </h1>
@@ -35,7 +38,7 @@
 
 <script>
 export default {
-  name: 'HomeTitle',
+  name: 'Title',
 
   /* props, make msg transported from upper stage layer to lower stage layer */
   props: [],
@@ -49,20 +52,20 @@ export default {
 </script>
 
 <style scoped>
-.text {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing 2.0s steps(20, end);
-}
+/*.text {*/
+/*  overflow: hidden; !* Ensures the content is not revealed until the animation *!*/
+/*  white-space: nowrap; !* Keeps the content on a single line *!*/
+/*  margin: 0 auto; !* Gives that scrolling effect as the typing happens *!*/
+/*  animation: typing 2.0s steps(20, end);*/
+/*}*/
 
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0
-  }
-  to {
-    width: 45%
-  }
-}
+/*!* The typing effect *!*/
+/*@keyframes typing {*/
+/*  from {*/
+/*    width: 0*/
+/*  }*/
+/*  to {*/
+/*    width: 45%*/
+/*  }*/
+/*}*/
 </style>

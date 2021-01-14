@@ -1,18 +1,15 @@
 <template>
-  <v-main class="home">
+  <v-main>
     <v-container class="fill-height">
-
       <Navigation :items="items"/>
       <router-view/>
-
     </v-container>
   </v-main>
 </template>
 
 <script>
-// import HomeTitle from "../components/HomeTitle";
 import axios from 'axios'
-import Navigation from "../components/Navigation";
+import Navigation from "@/components/Navigation";
 
 export default {
   name: 'Home',
@@ -22,10 +19,15 @@ export default {
   },
   data: () => ({
     items: [
-      {url: '/', icon: 'mdi-home', title: '首页'},
-      {url: '/login', icon: 'mdi-login', title: '登录'},
-      {url: '/about', icon: 'mdi-help-circle', title: '关于'},
-      {url: '/hello', icon: 'mdi-car', title: 'HELLO'},
+      {url: '/', icon: 'mdi-home', title: '网站首页'},
+      {url: '/profile', icon: 'mdi-account-box-multiple', title: '个人信息'},
+      {
+        url: '/todolist', icon: 'mdi-checkbox-multiple-marked', title:
+            '待办事项'
+      },
+      {url: '/books', icon: 'mdi-book-open-page-variant', title: '相关书籍'},
+      {url: '/notes', icon: 'mdi-notebook', title: '个人笔记'},
+      {url: '/about', icon: 'mdi-help-circle', title: '关于网站'},
     ],
     posts: [],
     response: [],
@@ -46,5 +48,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+
 </style>
