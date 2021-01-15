@@ -1,7 +1,11 @@
 # noteman
 半完成的spring boot 课设
 
-[toc]
+<!-- vim-markdown-toc GFM -->
+
+* [后续开发计划：](#后续开发计划)
+
+<!-- vim-markdown-toc -->
 
 ## 后续开发计划：
 
