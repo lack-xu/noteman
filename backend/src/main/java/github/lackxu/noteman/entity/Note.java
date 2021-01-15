@@ -4,17 +4,20 @@ import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @TableName note
  */
+@Entity
 @Data
 public class Note implements Serializable {
-    /**
-     * 
-     *
-     * @mbg.generated Wed Jan 13 15:21:40 CST 2021
-     */
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     /**
      * 

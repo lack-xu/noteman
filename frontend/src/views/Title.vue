@@ -2,11 +2,11 @@
   <v-main class="Title">
     <v-row
         align="center"
-        justify="center"
+        justify="space-around"
     >
       <v-img
-          max-width="16%"
-          max-height="16%"
+          max-width="18%"
+          max-height="18%"
           alt="logo"
           src="@/assets/logo.png">
         <template v-slot:placeholder>
@@ -22,16 +22,9 @@
           </v-row>
         </template>
       </v-img>
-      <v-col cols="12">
-        <v-row
-            justify="center"
-            align="center"
-        >
-          <h1 class="text">
-            Noteman 一个简易个人笔记管理网站
-          </h1>
-        </v-row>
-      </v-col>
+      <span class="text-center text-lg-h4">
+        Noteman 一个简易个人笔记管理网站
+      </span>
     </v-row>
   </v-main>
 </template>
@@ -50,22 +43,3 @@ export default {
   methods: {}
 }
 </script>
-
-<style scoped>
-/*.text {*/
-/*  overflow: hidden; !* Ensures the content is not revealed until the animation *!*/
-/*  white-space: nowrap; !* Keeps the content on a single line *!*/
-/*  margin: 0 auto; !* Gives that scrolling effect as the typing happens *!*/
-/*  animation: typing 2.0s steps(20, end);*/
-/*}*/
-
-/*!* The typing effect *!*/
-/*@keyframes typing {*/
-/*  from {*/
-/*    width: 0*/
-/*  }*/
-/*  to {*/
-/*    width: 45%*/
-/*  }*/
-/*}*/
-</style>

@@ -22,7 +22,12 @@ public class NotemanApplication {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**").allowedOrigins("http://localhost:8080");
+                registry.addMapping("/api/**")
+                        .allowedOrigins("http://localhost:8080")
+                        .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowCredentials(true)
+                        .maxAge(3600)
+                        .allowedHeaders("*");
             }
         };
     }

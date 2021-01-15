@@ -1,16 +1,10 @@
 <template>
   <v-main>
-    <v-col cols="12">
-      <v-row
-          justify="center"
-          align="center"
-      >
-        <v-btn depressed color="white" @click="selectAboutList()">
-          <h1>{{ msg }}</h1>
-        </v-btn>
-      </v-row>
-    </v-col>
-
+    <v-row justify="center">
+      <span class="text-center text-lg-h3">
+        {{ msg }}
+      </span>
+    </v-row>
   </v-main>
 </template>
 
@@ -21,7 +15,6 @@ import axios from "axios";
 export default {
   name: "About",
   data: () => ({
-    baseList: 'http://localhost:8098/api/about',
     aboutList: null,
     msg: null,
     index: 0,
@@ -30,9 +23,20 @@ export default {
     errored: false
   }),
   filters: {},
+  created() {
+    axios.get("/getAbout")
+        .then(response => {
+          this.msg = response.data[0].context;
+        })
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+  },
   methods: {
     getAbout() {
-      axios.get(this.baseList + "/getList")
+      axios.get("/getAbout")
           .then(response => {
             this.AboutList = response.data
           })
@@ -49,18 +53,6 @@ export default {
         this.index = 0
       this.msg = this.AboutList[this.index].context
     },
-  },
-  mounted() {
-    axios.get(this.baseList + '/getList')
-        .then(response => {
-          this.AboutList = response.data
-          this.msg = this.AboutList[0].context
-        })
-        .catch(error => {
-          console.log(error)
-          this.errored = true
-        })
-        .finally(() => this.loading = false)
   },
 }
 </script>

@@ -6,21 +6,16 @@
         <router-view/>
       </v-container>
 
-      <v-footer>
-        <v-row
-            justify="center"
-            align="center"
-        >
-          powered by vue+vuetify+spring boot
-        </v-row>
-      </v-footer>
+      <Footer msg="POWERED BY VUE+VUETIFY+SPRING BOOT"/>
 
     </v-main>
   </v-app>
 </template>
 
 <script>
+import Footer from "@/components/Footer";
 export default {
+  components: {Footer},
   data: () => ({})
 }
 </script>

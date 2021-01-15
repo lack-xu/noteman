@@ -14,7 +14,6 @@ import Navigation from "@/components/Navigation";
 export default {
   name: 'Home',
   components: {
-    // HomeTitle,
     Navigation
   },
   data: () => ({
@@ -25,8 +24,10 @@ export default {
         url: '/todolist', icon: 'mdi-checkbox-multiple-marked', title:
             '待办事项'
       },
-      {url: '/books', icon: 'mdi-book-open-page-variant', title: '相关书籍'},
+      {url: '/books', icon: 'mdi-book-multiple', title: '相关书籍'},
+      {url: '/addBooks', icon: 'mdi-book-plus-multiple', title: '添加书籍'},
       {url: '/notes', icon: 'mdi-notebook', title: '个人笔记'},
+      {url: '/addNotes', icon: 'mdi-notebook-plus', title: '添加笔记'},
       {url: '/about', icon: 'mdi-help-circle', title: '关于网站'},
     ],
     posts: [],
@@ -35,7 +36,7 @@ export default {
   }),
   methods: {
     callRestService: () => (
-        axios.get(`/hello`)
+        axios.get('/hello')
             .then(response => {
               // JSON responses are automatically parsed.
               this.response = response.data

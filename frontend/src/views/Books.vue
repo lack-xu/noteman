@@ -1,12 +1,10 @@
 <template>
-  <v-main>
-    <h1>Books</h1>
-  </v-main>
+  <router-view/>
 </template>
 
 <script>
 export default {
-  name: "Books"
+  name: "Books",
 }
 </script>
 
