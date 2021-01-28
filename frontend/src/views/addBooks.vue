@@ -1,25 +1,32 @@
 <template>
-  <el-form style="width: 60%" :model="bookForm" :rules="rules" ref="bookForm"
-           label-width="100px" class="demo-bookForm">
+  <div>
+    <v-container>
 
-    <el-form-item label="图书名称" prop="title">
-      <el-input v-model="bookForm.title"></el-input>
-    </el-form-item>
+    </v-container>
 
-    <el-form-item label="作者" prop="author">
-      <el-input v-model="bookForm.author"></el-input>
-    </el-form-item>
 
-    <el-form-item label="概要" prop="description">
-      <el-input v-model="bookForm.description"></el-input>
-    </el-form-item>
+<!--    <el-form style="width: 60%" :model="bookForm" :rules="rules" ref="bookForm"-->
+<!--             label-width="100px" class="demo-bookForm">-->
 
-    <el-form-item>
-      <el-button type="primary" @click="submitForm('bookForm')">提交</el-button>
-      <el-button @click="resetForm('bookForm')">重置</el-button>
-    </el-form-item>
+<!--      <el-form-item label="图书名称" prop="title">-->
+<!--        <el-input v-model="bookForm.title"></el-input>-->
+<!--      </el-form-item>-->
 
-  </el-form>
+<!--      <el-form-item label="作者" prop="author">-->
+<!--        <el-input v-model="bookForm.author"></el-input>-->
+<!--      </el-form-item>-->
+
+<!--      <el-form-item label="概要" prop="description">-->
+<!--        <el-input v-model="bookForm.description"></el-input>-->
+<!--      </el-form-item>-->
+
+<!--      <el-form-item>-->
+<!--        <el-button type="primary" @click="submitForm('bookForm')">提交</el-button>-->
+<!--        <el-button @click="resetForm('bookForm')">重置</el-button>-->
+<!--      </el-form-item>-->
+
+<!--    </el-form>-->
+  </div>
 </template>
 
 <script>

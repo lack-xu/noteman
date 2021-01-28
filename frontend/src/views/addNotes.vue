@@ -1,21 +1,22 @@
 <template>
-  <el-form style="width: 60%" :model="ruleForm" :rules="rules" ref="ruleForm"
-           label-width="100px" class="demo-ruleForm">
+  <v-main></v-main>
+<!--  <el-form style="width: 60%" :model="ruleForm" :rules="rules" ref="ruleForm"-->
+<!--           label-width="100px" class="demo-ruleForm">-->
 
-    <el-form-item label="图书名称" prop="name">
-      <el-input v-model="ruleForm.name"></el-input>
-    </el-form-item>
+<!--    <el-form-item label="图书名称" prop="name">-->
+<!--      <el-input v-model="ruleForm.name"></el-input>-->
+<!--    </el-form-item>-->
 
-    <el-form-item label="作者" prop="author">
-      <el-input v-model="ruleForm.author"></el-input>
-    </el-form-item>
+<!--    <el-form-item label="作者" prop="author">-->
+<!--      <el-input v-model="ruleForm.author"></el-input>-->
+<!--    </el-form-item>-->
 
-    <el-form-item>
-      <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-      <el-button @click="resetForm('ruleForm')">重置</el-button>
-    </el-form-item>
+<!--    <el-form-item>-->
+<!--      <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>-->
+<!--      <el-button @click="resetForm('ruleForm')">重置</el-button>-->
+<!--    </el-form-item>-->
 
-  </el-form>
+<!--  </el-form>-->
 </template>
 
 <script>

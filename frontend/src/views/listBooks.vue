@@ -1,52 +1,52 @@
 <template>
   <v-container>
-      <el-table
-          :data="tableData"
-          border
-          style="width: 70%">
-        <el-table-column
-            prop="id"
-            label="编号"
-            width="150">
-        </el-table-column>
-        <el-table-column
-            prop="title"
-            label="图书名"
-            width="120">
-        </el-table-column>
-        <el-table-column
-            prop="author"
-            label="作者"
-            width="120">
-        </el-table-column>
-        <el-table-column
-            prop="description"
-            label="出版社"
-            width="120">
-        </el-table-column>
-        <el-table-column
-            fixed="right"
-            label="操作"
-            width="100">
-          <!--!!!-->
-          <template slot-scope="scope">
-            <el-button @click="edit(scope.row)" type="text" size="small">
-              修改
-            </el-button>
-            <el-button @click="deleteBook(scope.row)" type="text"
-                       size="small" onclick="return confirm('确认是否删除此图书？')">
-              删除
-            </el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-    <v-spacer/>
-      <el-pagination
-          layout="prev, pager, next"
-          :page-size="pageSize"
-          :total="total"
-          @current-change="page">
-      </el-pagination>
+<!--      <el-table-->
+<!--          :data="tableData"-->
+<!--          border-->
+<!--          style="width: 70%">-->
+<!--        <el-table-column-->
+<!--            prop="id"-->
+<!--            label="编号"-->
+<!--            width="150">-->
+<!--        </el-table-column>-->
+<!--        <el-table-column-->
+<!--            prop="title"-->
+<!--            label="图书名"-->
+<!--            width="120">-->
+<!--        </el-table-column>-->
+<!--        <el-table-column-->
+<!--            prop="author"-->
+<!--            label="作者"-->
+<!--            width="120">-->
+<!--        </el-table-column>-->
+<!--        <el-table-column-->
+<!--            prop="description"-->
+<!--            label="出版社"-->
+<!--            width="120">-->
+<!--        </el-table-column>-->
+<!--        <el-table-column-->
+<!--            fixed="right"-->
+<!--            label="操作"-->
+<!--            width="100">-->
+<!--          &lt;!&ndash;!!!&ndash;&gt;-->
+<!--          <template slot-scope="scope">-->
+<!--            <el-button @click="edit(scope.row)" type="text" size="small">-->
+<!--              修改-->
+<!--            </el-button>-->
+<!--            <el-button @click="deleteBook(scope.row)" type="text"-->
+<!--                       size="small" onclick="return confirm('确认是否删除此图书？')">-->
+<!--              删除-->
+<!--            </el-button>-->
+<!--          </template>-->
+<!--        </el-table-column>-->
+<!--      </el-table>-->
+<!--    <v-spacer/>-->
+<!--      <el-pagination-->
+<!--          layout="prev, pager, next"-->
+<!--          :page-size="pageSize"-->
+<!--          :total="total"-->
+<!--          @current-change="page">-->
+<!--      </el-pagination>-->
   </v-container>
 </template>
 
