@@ -1,4 +1,4 @@
-package github.lack.noteman;
+package github.lackxu.noteman;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
