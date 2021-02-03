@@ -54,7 +54,7 @@ const routes = [
         component: () => import('@/views/addBooks')
       },
       {
-        path:'/update',
+        path:'update',
         component: () => import('@/views/updateBook'),
         show:false
       },

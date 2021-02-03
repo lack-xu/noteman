@@ -1,45 +1,43 @@
 <template>
   <v-main>
-    <v-container>
+    <v-container class="fill-height">
       <v-row
           justify="center"
           align="center"
           class="text-center"
       >
-
         <v-col
             cols="8"
             md="4"
             sm="8"
         >
-          <span class="text-lg-h3">
+          <span class="text-lg-h3 text-sm-h4">
             Noteman
           </span>
           <v-text-field
               color="black"
               label="Name"
+              type="email"
               v-model="user.username"
           />
           <v-text-field
               color="black"
               label="Password"
+              type="password"
               v-model="user.password"
           />
           <v-row
               justify="center"
               align="center"
           >
-            <v-hover>
-              <v-btn
-                  depressed
-                  color="white"
-                  @click="login"
-              >
+            <v-btn
+                text
+                @click="login"
+            >
                 <span>
                   Login
                 </span>
-              </v-btn>
-            </v-hover>
+            </v-btn>
           </v-row>
         </v-col>
       </v-row>
@@ -52,8 +50,8 @@ export default {
   name: "Login",
   data: () => ({
     user: {
-      username: 'DemoUser',
-      password: 'demo_user'
+      username: '',
+      password: ''
     },
   }),
   mounted() {
